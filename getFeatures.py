@@ -86,16 +86,16 @@ def parse_args():
     parser.add_argument('--val_mode', type=bool, default=False,
                         help='10 folds cross validation ?')
     parser.add_argument('--modelName', type=str, default='FER_DCNN',
-                        help='support FER_DCNN/MTL_HPS/MTL_PS_MCNN/MTL_CSN/Our')
+                        help='support FER_DCNN/Our')
     parser.add_argument('--datasetName', type=str, default='RAF',
                         help='support RAF/SFEW2/CK+/OULU_CASIA')
     parser.add_argument('--num_workers', type=int, default=8,
                         help='num workers of loading data')
-    parser.add_argument('--model_save_path', type=str, default='results/bestModels2',
+    parser.add_argument('--model_save_path', type=str, default='results/bestModels',
                         help='path to save model.')
     parser.add_argument('--res_save_path', type=str, default='results/Features',
                         help='path to save results.')
-    parser.add_argument('--gpu_ids', type=list, default=[2],
+    parser.add_argument('--gpu_ids', type=list, default=[0],
                         help='indicates the gpus will be used.')
     return parser.parse_args()
 
